@@ -30,8 +30,7 @@ import com.serotonin.mango.vo.event.EventTypeVO;
 import com.serotonin.mango.vo.report.ReportInstance;
 import com.serotonin.mango.vo.report.ReportVO;
 import org.scada_lts.permissions.ACLConfig;
-import org.scada_lts.permissions.PermissionViewACL;
-import org.scada_lts.permissions.PermissionWatchlistACL;
+import org.scada_lts.permissions.entry.PermissionViewACL;
 
 import javax.servlet.http.HttpServletRequest;
 

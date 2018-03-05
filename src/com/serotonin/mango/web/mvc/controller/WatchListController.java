@@ -27,8 +27,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.scada_lts.permissions.ACLConfig;
-import org.scada_lts.permissions.PermissionViewACL;
-import org.scada_lts.permissions.PermissionWatchlistACL;
+import org.scada_lts.permissions.entry.PermissionWatchlistACL;
 import org.scada_lts.permissions.model.EntryDto;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.ParameterizableViewController;

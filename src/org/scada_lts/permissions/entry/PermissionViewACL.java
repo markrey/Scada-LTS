@@ -15,10 +15,11 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package org.scada_lts.permissions;
+package org.scada_lts.permissions.entry;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.scada_lts.permissions.PermissionEvaluatorAclImp;
 import org.scada_lts.permissions.model.EntryDto;
 
 import java.util.List;
