@@ -92,6 +92,22 @@ public class ScadaConfig {
     */
 	public static final String USE_CACHE_DATA_SOURCES_POINTS_WHEN_THE_SYSTEM_IS_READY = "abilit.USE_CACHE_DATA_SOURCES_POINTS_WHEN_THE_SYSTEM_IS_READY";
 
+	/**
+	 * Enabled remove events
+	 */
+	public static final String ENABLE_REMOVE_EVENTS = "abilit.ENABLE_REMOVE_EVENTS";
+
+	/**
+	 * Months expressed in an int greater than 1 for determining which events are to be deleted
+	 */
+	public static final String REMOVE_EVENTS_OLDER_THEN_IN_MONTHS = "abilit.REMOVE_EVENTS_OLDER_THEN_IN_MONTHS";
+
+	/**
+	 * The time at which the removal of old events will start once a day
+	 */
+	public static final String TIME_OF_EVENT_REMOVAL_START = "abilit.TIME_OF_EVENT_REMOVAL_START";
+
+
 	private static final Log LOG = LogFactory.getLog(ScadaConfig.class);
 	private static final String FILE_NAME_LOGO="logo.png";
 	private static final String FILE_NAME_PROPERTIES="env.properties";
@@ -163,6 +179,23 @@ public class ScadaConfig {
 			result = Long.parseLong(propertyValue);
 		} catch (Exception e) {
 			result = new Long(defaultValues);
+		}
+		return result;
+	}
+
+	/**
+	 * Get property value of type byte with default value
+	 * @param propertyName
+	 * @param defaultValues
+	 * @return
+	 */
+	public Byte getByte(String propertyName, byte defaultValues) {
+		Byte result = new Byte(defaultValues);
+		try {
+			String propertyValue = getProperty(propertyName);
+			result = Byte.parseByte(propertyValue);
+		} catch (Exception e) {
+			result = new Byte(defaultValues);
 		}
 		return result;
 	}
