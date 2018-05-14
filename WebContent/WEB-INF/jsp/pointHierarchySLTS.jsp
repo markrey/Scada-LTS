@@ -103,6 +103,7 @@ thead th {
 
 </head>
 <body onload="onloadHandler();"  onunload="onunloadHandler();" >
+
 	<div class="container-fluid">
 		<div class="row">
 			<table width="100%" cellspacing="0" cellpadding="0" border="0"
@@ -375,7 +376,17 @@ thead th {
 									<span class="glyphicon glyphicon-info-sign"></span>
 								</button>
 							</div>
-						</div>
+							<div class="btn-group">
+							    <button id="Export" class="btn" data-toggle="tooltip" data-placement="top" title='<fmt:message key="menu.point_hierarchy.export.tooltip=export"/>'>
+                            	    <span class="glyphicon glyphicon-export"></span>
+                            	</button>
+                            	<button id="import" class="btn" data-toggle="tooltip" data-placement="top" title='<fmt:message key="menu.point_hierarchy.import.tooltip=export"/>'>
+                                    <span class="glyphicon glyphicon-import"></span>
+                                </button>
+                                <div id="hierarchy-import-export">
+                                    {{ message }}
+                                </div>
+						    </div>
 						<div id="tree"
 							class=" panel-body fancytree-colorize-hover fancytree-fade-expander"></div>
 					</div>
@@ -404,6 +415,7 @@ thead th {
 	src="resources/app/bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
 <script src="resources/sockjs-0.3.4.js"></script>
 <script src="resources/stomp.js"></script>
+<script src="resources/app/bower_components/vue/dist/vue.min.js"></script>
 
 <script>
 "use strict";
@@ -1323,4 +1335,18 @@ var messages = {
     
     
     </script>
+
+ <!-- import export hierarchy -->
+
+<script>
+  var app = new Vue({
+    el: '#hierarchy-import-export',
+    data: {
+      message: 'Hello Vue!'
+    }
+  });
+
+
+
+</script>
 </html>
