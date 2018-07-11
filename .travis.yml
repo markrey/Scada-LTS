@@ -81,9 +81,9 @@ after_script:
 - pwd
 - ls 
 - docker version
-- docker build -t dockergb/scadalts-dev .
+- docker build -t quay.io/loopedge/scadalts .
 - docker images
 - docker login -u=$DOCKER_USENAME -p=$DOCKER_PASSWORD
-- docker push dockergb/scadalts-dev 
+- docker push quay.io/loopedge/scadalts 
 
 #- echo $TRAVIS_BUILD_DIR
