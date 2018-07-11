@@ -1,4 +1,8 @@
 #!/bin/bash
+
+chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
+sleep 10
+
 /etc/init.d/mysql start
 #create database scadalts if not exist
 sleep 10
